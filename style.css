@@ -27,7 +27,7 @@ body {
     color: white;                                     /* Default text color inside navbar */
     z-index: 1000;                                    /* Ensures it stays above other content layers */
     box-shadow: 0px 4px 10px #54452c;                 /* Adds depth with a shadow under the navbar */
-    padding: 10px 0;                                  /* Adds vertical space inside the navbar */
+    padding: 5px 0;                                  /* Adds vertical space inside the navbar */
     display: flex;                                    /* Flexbox used to center the content horizontally */
     justify-content: center;                          /* Horizontally centers the unordered list (ul) */
 }
@@ -156,6 +156,9 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 650px) {
+    .navbar {
+    padding: 2px 0;
+    }
     .navbar ul {
         flex-direction: row;
         justify-content: center;
