@@ -86,6 +86,8 @@ p.nv2 {
     max-width: 600px;                                 /* Restricts line length for better readability */
 }
 
+
+
 /* ===== Image Styling ===== */
 
 /* Container to hold and align images */
@@ -113,8 +115,32 @@ p.nv2 {
 .image2 {
     width: 100%;
     height: auto;
-    top: -10px;
 }
+
+.image-text {
+    display: flex;              /* Places image and text side by side */
+    align-items: center;        /* Vertically aligns text with image */
+    gap: 20px;                  /* Space between image and text */
+    margin: 20px 0;             /* Optional spacing above and below */
+    padding: 20px;               /* Inner space */
+    background-color: white;     /* White box */
+    border-radius: 8px;          /* Optional: rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+    margin: 20px 0;              /* Space between blocks */
+}
+  
+  .image-text img {
+    width: auto;               /* Fixed or responsive width */
+    height: 280px;               /* Keeps image proportions */
+    border-radius: 6px;         /* Optional: round corners */
+  }
+  
+  .image-text p{
+    color: #000000;                /* Or your preferred text color */
+    font-size: 27px;
+    line-height: 1.5;
+    text-align: left;
+  }
 
 
 
@@ -129,7 +155,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     .navbar ul {
         flex-direction: row;
         justify-content: center;
@@ -145,6 +171,10 @@ footer {
     }
     .custom-image-1, .custom-image-2 {
         max-width: 80%;
+    }
+    .image-text {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;     /* Optional: center the text */
     }
 }
 
