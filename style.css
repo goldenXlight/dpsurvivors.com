@@ -176,6 +176,9 @@ footer {
         flex-direction: column; /* Stack image and text vertically */
         text-align: center;     /* Optional: center the text */
     }
+    .image2{
+    top: 100px;
+    }
 }
 
 /* The main container that holds the background images */
