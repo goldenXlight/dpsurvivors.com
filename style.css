@@ -157,7 +157,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 650px) {
     .navbar {
-    padding: 0px 0;
+    padding: -5px 0;
     }
     .navbar ul {
         flex-direction: row;
