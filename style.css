@@ -1,0 +1,202 @@
+/* Reset styles to ensure consistency across browsers */
+* {
+    margin: 0;                    /* Removes default margin on all elements */
+    padding: 0;                   /* Removes default padding on all elements */
+    box-sizing: border-box;      /* Ensures padding and border are included in the element’s total width and height */
+}
+
+/* Base styling for the entire page */
+body {
+    font-family: 'Georgia', serif;                   /* Sets a serif font for classic, elegant text appearance */
+    line-height: 1.6;                                /* Increases spacing between lines for readability */
+    color: #333;                                     /* Sets default text color to dark gray */
+    background: linear-gradient(to bottom, #e0caab, #ddc3a0); /* Applies a vertical gradient background */
+    min-height: 100vh;                               /* Ensures the body fills at least the full height of the screen */
+    text-align: center;                              /* Centers all text horizontally by default */
+    display: flex;                                   /* Enables flexbox layout for vertical structure */
+    flex-direction: column;                          /* Aligns children in a vertical column (top to bottom) */
+    justify-content: space-between;                  /* Distributes space evenly between top, middle, and bottom content */
+}
+
+/* ===== Navigation Bar Styles ===== */
+.navbar {
+    position: fixed;                                 /* Fixes the navbar to the top of the page so it stays while scrolling */
+    top: 0;                                           /* Anchors it to the top edge of the screen */
+    width: 100%;                                      /* Stretches the navbar across the entire width */
+    background-color: #68470fdc;                      /* Semi-transparent dark brown background */
+    color: white;                                     /* Default text color inside navbar */
+    z-index: 1000;                                    /* Ensures it stays above other content layers */
+    box-shadow: 0px 4px 10px #54452c;                 /* Adds depth with a shadow under the navbar */
+    padding: 5px 0;                                  /* Adds vertical space inside the navbar */
+    display: flex;                                    /* Flexbox used to center the content horizontally */
+    justify-content: center;                          /* Horizontally centers the unordered list (ul) */
+}
+
+/* Unordered list inside navbar */
+.navbar ul {
+    list-style: none;                                 /* Removes default bullet points */
+    display: flex;                                    /* Aligns list items horizontally */
+    justify-content: center;                          /* Centers items within the navbar */
+    flex-wrap: wrap;                                  /* Allows items to wrap onto a new line if needed on smaller screens */
+    padding: 0px;                                       /* Removes default padding */
+}
+
+/* Individual list items in the navbar */
+.navbar ul li {
+    margin: 0 10px;                                   /* Horizontal spacing between navigation links */
+}
+
+/* Styling for the links inside navbar items */
+.navbar ul li a {
+    text-decoration: none;                            /* Removes underlines from links */
+    color: white;                                     /* Sets text color to white */
+    font-size: 22px;                                  /* Standard readable size for navigation text */
+    padding: 8px 12px;                                /* Padding to increase the clickable area around the text */
+    transition: 0.8s;                                  /* Smooth transition for hover effects */
+    display: block;                                   /* Makes the whole padded area clickable */
+}
+
+/* Hover effect for navbar links */
+.navbar ul li a:hover {
+    background-color: #46320f;                        /* Darker background when hovered */
+    border-radius: 5px;                               /* Rounded corners for the hover box */
+}
+
+
+
+
+/* ===== Main Content Area ===== */
+main {
+    padding: 80px 20px;                               /* Top padding ensures content doesn't hide under the fixed navbar */                             /* Centers content inside the main element */
+    flex-grow: 1;                                     /* Allows this section to expand and fill available vertical space */
+}
+
+/* Main heading style */
+h1 {
+    font-size: 2.5rem;                                /* Large font size for titles (responsive) */
+    color: #2c3e50;                                   /* Dark slate color for the heading */
+    margin-bottom: 20px;                              /* Space between the heading and following content */
+}
+
+/* Paragraph with class 'nv2' */
+p.nv2 {
+    font-size: 1.2rem;                                /* Slightly larger font for readability */
+    color: #ddfaf9;                                      /* Medium gray text color */
+    margin: 20px auto;                                /* Adds vertical spacing and centers the paragraph */
+    max-width: 600px;                                 /* Restricts line length for better readability */
+}
+
+
+
+/* ===== Image Styling ===== */
+
+/* Container to hold and align images */
+.image-container {
+    display: flex;                                    /* Enables flex layout for alignment */
+    justify-content: center;                          /* Horizontally centers the image(s) */
+    align-items: center;                              /* Vertically centers the image(s) */
+    margin-top: 30px;                                 /* Adds space above the image container */
+}
+
+/* Custom styling for images */
+.custom-image {
+    width: 150px;                                     /* Sets image width to 150px (you can convert this to % if needed) */
+    height: auto;                                     /* Maintains the image's natural aspect ratio */
+    transition: transform 0.5s ease-in-out;           /* Smooth animation effect for any transformation (e.g., on hover) */
+}
+
+.image1 {
+    width: 40%;
+    height: auto;
+    left: 20;
+    text-align: left 20%;
+}
+
+.image2 {
+    width: 100%;
+    height: auto;
+    top: -100px;
+}
+
+.image-text {
+    display: flex;              /* Places image and text side by side */
+    align-items: center;        /* Vertically aligns text with image */
+    gap: 20px;                  /* Space between image and text */
+    margin: 20px 0;             /* Optional spacing above and below */
+    padding: 20px;               /* Inner space */
+    background-color: white;     /* White box */
+    border-radius: 8px;          /* Optional: rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+    margin: 15px 40px;              /* Space between blocks */
+}
+  
+  .image-text img {
+    width: auto;               /* Fixed or responsive width */
+    height: 280px;               /* Keeps image proportions */
+    border-radius: 6px;         /* Optional: round corners */
+  }
+  
+  .image-text p{
+    color: #000000;                /* Or your preferred text color */
+    font-size: 27px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+
+
+/* Footer */
+footer {
+    background-color: #50422c;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+    .navbar {
+        padding: 3px 0;
+    }
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .navbar ul li {
+        margin: 5px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .custom-image-1, .custom-image-2 {
+        max-width: 80%;
+    }
+    .image-text {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;     /* Optional: center the text */
+    }
+    .image2{
+        top: 100px;
+    }
+}
+
+/* The main container that holds the background images */
+.background-container {
+    position: relative;           /* Makes this a positioning reference for children */
+    width: 100%;                  /* Takes up full width of the screen */
+    height: 100vh;                /* Full height of the visible screen (viewport height) */
+    overflow: hidden;             /* Hides any part of the image that goes outside this container */
+}
+
+/* Base styles applied to all background images */
+.bg-image {
+    position: absolute;           /* Allows free positioning inside the relative parent */
+    max-width: 100%;              /* Prevents image from exceeding container width */
+    height: auto;                 /* Maintains the image's aspect ratio */
+    pointer-events: none;         /* Ensures the images don’t block mouse clicks or interactions */
+}

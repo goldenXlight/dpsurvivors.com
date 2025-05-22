@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Library</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+        color: black;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: white;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #FF9F55;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .right::after {
+      left: -16px;
+    }
+
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    /* Image styling inside timeline */
+    .content img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      .left::after, .right::after {
+        left: 15px;
+      }
+
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page2.html">Page 2</a></li>
+      <li><a href="time.html">Chapters of IB</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN TIMELINE -->
+  <main>
+    <h1>Chapters of Our IB Saga</h1>
+    <div class="timeline">
+      <!-- Repeat for each event -->
+      <!-- Just change the image src and text -->
+      <div class="container left"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>August – First day of IB. A quiet start.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (2).png" alt=""><h2>Title</h2><p>September – Early mornings, late deadlines.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (3).png" alt=""><h2>Title</h2><p>October – First lab mishap. Glass everywhere.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (2).png" alt=""><h2>Title</h2><p>November – IA brainstorming and sleepless nights.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (5).png" alt=""><h2>Title</h2><p>December – Final TOK outline submission.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (4).png" alt=""><h2>Title</h2><p>January – Physics IA test trials in full swing.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (3).png" alt=""><h2>Title</h2><p>February – English IO drafts and panic attacks.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (2).png" alt=""><h2>Title</h2><p>March – Chemistry titrations: spill and learn.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (4).png" alt=""><h2>Title</h2><p>April – Math IA confusion but perseverance.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (5).png" alt=""><h2>Title</h2><p>May – First round of mocks. Reality check.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (2).png" alt=""><h2>Title</h2><p>June – CAS reflections and photo uploads.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (3).png" alt=""><h2>Title</h2><p>July – Summer break... or internal crying?</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (5).png" alt=""><h2>Title</h2><p>August – Back again. Extended Essay edits.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>September – Theory of Knowledge in full force.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>October – IA submissions incoming. Panic again.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>November – Group 4 project: organized chaos.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>December – Revision season starts... slowly.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>January – Final mocks. Coffee consumption triples.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>February – Review, stress, repeat. Exam season looms.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (1).png" alt=""><h2>Title</h2><p>March – Nearing the end. But the work never ends.</p></div></div>
+      <div class="container left"><div class="content"><img src="image/image (4).png" alt=""><h2>Title</h2><p>April – Math IA confusion but perseverance.</p></div></div>
+      <div class="container right"><div class="content"><img src="image/image (5).png" alt=""><h2>Title</h2><p>May – First round of mocks. Reality check.</p></div></div>
+
+    </div>
+  </main>
+</body>
+</html>
